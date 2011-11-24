@@ -1,29 +1,9 @@
 # coding: utf-8
 module Bootstrap
   
-  class CustomFormBuilder < SimpleForm::FormBuilder
-    def input(attribute_name, options = {}, &block)
-       "<div class='clearfix'>#{super}</div>".html_safe
-    end
-
-    def button(type, *args, &block)
-      options = args.extract_options!
-      options[:class] = "btn primary"
-      args << options
-      "<div class='actions'>
-        #{super}
-      </div>".html_safe
-    end
-  end
-  
   module Helper
     def yield_or_default(message, default_message = "")
       message.nil? ? default_message : message
-    end
-
-    def bootstrap_form_for(object, *args, &block)
-      options = args.extract_options!
-      simple_form_for(object, *(args << options.merge(:builder => Bootstrap::CustomFormBuilder)), &block)
     end
 
 
