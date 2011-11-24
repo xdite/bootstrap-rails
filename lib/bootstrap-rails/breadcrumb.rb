@@ -46,7 +46,7 @@ module Bootstrap
         @breadcrumbs.each_with_index do |c, i|
           breadcrumb_class = []
           breadcrumb_class << "first" if i == 0
-          breadcrumb_class << "last" if i == (@breadcrumbs.length - 1)
+          breadcrumb_class << "last active" if i == (@breadcrumbs.length - 1)
 
           if i == (@breadcrumbs.length - 1)
             breadcrumb_content = c
