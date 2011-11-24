@@ -22,7 +22,7 @@ module Bootstrap
         title ||= @page_title
         url ||= url_for
         if title
-          @breadcrumbs.push("<a href=\"#{url}\">#{title}</a> ".html_safe)
+          @breadcrumbs.push("<a href=\"#{url}\">#{title}</a>".html_safe)
         end
       end
 
