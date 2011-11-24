@@ -39,7 +39,7 @@ module Bootstrap
     module Helpers
 
       def render_breadcrumb
-        return "" if @breadcrumbs.size <= 1
+        return "" if @breadcrumbs.size <= 0
         prefix = "".html_safe
         crumb = "".html_safe
 
